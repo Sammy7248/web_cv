@@ -1,4 +1,4 @@
-body{
+html,body{
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,6 +10,8 @@ body{
 form{
     width: 30vw;
     margin: auto;
+    padding:20px;
+    margin-top: -20px;
     box-sizing: border-box;
     background: rgba(0, 0, 0,.4)
 }
@@ -57,6 +59,8 @@ textarea{
     text-transform: uppercase;
     width: fit-content;
     text-align: center;
+    margin-left: 10%;
+    width: 80%;
 }
 
 #enviar{
@@ -73,8 +77,8 @@ textarea{
     background: url(../image/slider/industry_4.jpeg) no-repeat center center fixed;
     display: table;
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-size: cover;
 }
 
@@ -85,6 +89,7 @@ textarea{
     padding: 1% 0;
     font-size: 1.3 em;
     margin:0;
+    width: auto;
 }
 
 .navbar-collapse .navbar-nav li a{
@@ -97,14 +102,10 @@ textarea{
 /*----------------------------*/
 /*----------------------------*/
 
-#mycarousel{
-    width: 100vw;
-}
-
 .carousel-caption{ 
    font-size: 40px;
    font-weight: bold;
-}  
+} 
 
 #home{
     background: url(../image/slider/industry_2.jpeg) no-repeat center center fixed;
@@ -140,22 +141,30 @@ textarea{
 .padding img{
     width: 100%;
 }
+
 #fixed{
     background: url(../image/industry.jpeg) no-repeat center center fixed;
     display: table;
     height: 60vh;
     position: relative;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
 }
 
 footer{
-    width: 100vw;
+    width: 100%;
     background-color: #11406D;
     padding: 5% 5% 10% 5%;
     color: white;
 }
 
+@media(max-width:1450px){
+    .navbar{
+        background-color: #23415C;
+        padding: 2% 0;
+        margin:0;
+    }
+}
 
 @media(max-width:780px){
     .landing-text h1{
@@ -165,12 +174,18 @@ footer{
     .navbar{
         background-color: #23415C;
         padding: 4% 0;
-        /* font-size: 1.3 em; */
         margin:0;
     }
 
     form{
         width: 80%;
+    }
+
+    #cv{
+        width: 80%;
+        margin:10px 10% 10px 10%;
+        padding:0px;
+        
     }
 
     .lead{
