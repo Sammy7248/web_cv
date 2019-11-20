@@ -15,7 +15,22 @@ $(document).ready(function(){
         }
     });
 
+    $("#cards_cont").load("../php/cards.php");
+
     $('#select-vacantes').load("../php/select.php");
 
+    var cont = 1;
+    $("#togg").click(function(event) {
+        event.preventDefault();
+        if (cont % 2 != 0) {
+            $("#togg #more i").removeClass("fa fa-angle-double-down");
+            $("#togg #more i").addClass("fa fa-angle-double-up");
+        } else {
+            $("#togg #more i").removeClass("fa fa-angle-double-up");
+            $("#togg #more i").addClass("fa fa-angle-double-down");
+        }
+        $(".card .oculto").slideToggle();
+        cont = cont + 1;
+    });
     // $('#select-vacantes').load("../php/select.php");
 });

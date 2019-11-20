@@ -2,15 +2,13 @@
 <?php
     require_once "conexion.php";
     $conexion = new conect();
-    // VAMOS A CREAR LA TABLA DE VACANTES, DE POSTULADOS.
-    // INVESTIGAR COMO ENCRIPTAR CONTRASEÑA DE UNA FORMA SEGURA
-    $vacantes = "SELECT EMAIL FROM SUPERUSER";
+    $vacantes = "SELECT ID_VACANTE,NOMBRE_VACANTE, AREA FROM VACANTE";
     $consulta = mysqli_query($conexion->conectar(), $vacantes);
 
     while($row=mysqli_fetch_row($consulta)){
 ?>
 
-<option value="1"><?php echo $row[0]?></option>
+<option value="<?php $row[0]?>"><?php echo $row[1]." De ".$row[2]?></option>
 
 <?php
     }
