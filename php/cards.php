@@ -44,9 +44,6 @@ while ($row = mysqli_fetch_row($result)) {
             </ul>
         </div>
     </div>
-    <!-- <div style="background: white;height: 30px;">
-    </div> -->
-
 <?php
 }
 ?>
