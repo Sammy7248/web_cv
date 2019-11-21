@@ -8,8 +8,12 @@ while ($row = mysqli_fetch_row($result)) {
     ?>
 
     <div class="card">
-        <div style="background: #11406D;">
-            <img src="../image/logo.jpeg">
+        <div style="background: background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 19%, #207cca 24%, #207cca 24%, #2989d8 50%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1e5799 19%,#207cca 24%,#207cca 24%,#2989d8 50%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1e5799 19%,#207cca 24%,#207cca 24%,#2989d8 50%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */">
+            <i class="fa fa-user-tie" style="font-size: 120px;padding:20px"></i>
         </div>
         <h3>Vacante</h3>
         <p><?php echo $row[1] ?></p>
@@ -39,9 +43,9 @@ while ($row = mysqli_fetch_row($result)) {
                         ?></li>
             </ul>
         </div>
-        <div style="background: #11406D;height: 30px;">
-        </div>
     </div>
+    <!-- <div style="background: white;height: 30px;">
+    </div> -->
 
 <?php
 }
