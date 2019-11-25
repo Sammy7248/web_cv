@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     $("#ingresar").on('click',function(){
-        var values = [];
+        // var values = [];
 
         // if($("#username").val().length > 0){
             // values.push({
