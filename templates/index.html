@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +7,13 @@
     <title>Grupo Antolin</title>
 
     <link rel="stylesheet" href="../bootstrap-3/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../fontawesome/font-awesome/fontawesome-all.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../datatables/datatables.min.css" type="text/css">
     <link rel="stylesheet" href="../datatables/DataTables-1.10.18/css/dataTables.bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/home.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../toast_/jquery.toast.css">
+    <link type="text/css" rel="stylesheet" href="../select-input/select-input-css/bootstrap-select.css">
 
 </head>
 
@@ -105,20 +106,42 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div>
-                        <form action="php file" method="POST">
+                        <form action="../php/registrarpost.php" method="post" enctype="multipart/form-data" id="postul-form">
                             <h2>CONTACTO</h2>
                             <br>
-                            <select class="custom-select my-1 mr-sm-2" id="select-vacantes">
+                            <select class="selectpicker form-control" data-live-search="true" id="select-vacantes">
+                                <option selected>Seleccione Una Vacante</option>
+                                <option value="1">Secretario</option>
+                                <option value="2">Desarrollador</option>
+                                <option value="3">Tester</option>
                             </select>
-                            <input required type="text" name="nombre" placeholder="Nombre">
-                            <input required type="text" name="apellido" placeholder="Apellido">
-                            <input required type="text" name="ciudad" placeholder="Ciudad">
-                            <input required type="tel" name="telefono" placeholder="Teléfono">
-                            <input required type="email" name="correo" placeholder="Correo Electrónico">
-                            <textarea rows="10" name="capacidades"
+                            <div class="input-group">
+                                <input class="form-control" required type="text" id="nombre" name="nombre" placeholder="Nombre">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" required type="text" id="apellido" name="apellido" placeholder="Apellido">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            </div>
+                            <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" id="estados">
+                                <option selected>Seleccione Una Ciudad</option>
+                            </select>
+                            <div class="input-group">
+                                <input class="form-control" required type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+                                <span class="input-group-addon"><i class="fa fa-building"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" required type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" required type="email" id="correo" name="correo" placeholder="Correo Electrónico">
+                                <span class="input-group-addon"><i class="fa fa-laptop"></i></span>
+                            </div>
+                            <textarea required rows="10" name="capacidades" id="capacidades"
                                 placeholder="Realice una breve descripcion de sus capacidades..."></textarea>
                             <h2><label for="cv" id="cv_label">Seleccione CV</label></h2>
-                            <input type="file" id="cv" name="cv">
+                            <input type="file" id="cv" name="cv" accept=".pdf">
                             <input type="submit" id="enviar" value="Enviar">
                         </form>
                     </div>
@@ -146,9 +169,12 @@
             </div>
         </div>
     </footer>
+
     <script src="../jquery/jquery-3.3.1.min.js"></script>
     <script src="../bootstrap-3/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../datatables/datatables.min.js" type="text/javascript"></script>
+    <script src="../toast_/jquery.toast.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../select-input/select-input-js/bootstrap-select.js"></script>
     <script src="../js/index.js" type="text/javascript"></script>
 </body>
 

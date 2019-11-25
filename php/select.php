@@ -8,7 +8,7 @@
     while($row=mysqli_fetch_row($consulta)){
 ?>
 
-<option value="<?php $row[0]?>"><?php echo $row[1]." De ".$row[2]?></option>
+<option require data-subtext="<?php echo $row[0]?>"><?php echo $row[1]." De ".$row[2]?></option>
 
 <?php
     }
