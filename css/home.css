@@ -16,7 +16,6 @@ form{
     width: 30vw;
     margin: auto;
     padding:20px;
-    /* margin-top: -20px; */
     box-sizing: border-box;
     background: rgba(0, 0, 0,.4)
 }
@@ -37,6 +36,11 @@ form .input-group span .fa-laptop, .fa-phone{
 
 form .input-group span .fa-building{
     font-size: 18px;
+}
+
+form .input-group span{
+    background: #11406D;
+    color: white;
 }
 
 form h2{

@@ -1,0 +1,46 @@
+html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#menu{
+    background: #11406D;
+    padding:5px;
+}
+
+.container-fluid #myNavbar ul li a{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.container-fluid #myNavbar ul li a:hover, .container-fluid .navbar-header .navbar-brand:hover{
+    color: #d3d3d3;
+}
+
+.container-fluid .navbar-header .navbar-brand{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+/* style="background: #11406D; color: white;font-weight: 800;font-size: 20px;" */
+.container-fluid .panel .panel-heading{
+    background: #11406D;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-body div{
+    margin-top: 5px;
+}
+

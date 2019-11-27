@@ -1,40 +1,24 @@
 $(document).ready(function(){
     
-    $("#ingresar").on('click',function(){
-        // var values = [];
+    var show = 1;
+    $("#show").on("click", function(){
+        show+=1;
+        if(show%2==0){
+            $("#password").attr("type","text");
+            $(this).attr('class','glyphicon glyphicon-eye-close');
+        }
+        else{
+            $("#password").attr("type","password");
+            $(this).attr("class","glyphicon glyphicon-eye-open");
+        }
+    });
 
-        // if($("#username").val().length > 0){
-            // values.push({
-                // "name":"email",
-                // "value": $("#username").val()
-            // });
-        // }
-// 
-        // if($("#password").val().length > 0){
-            // values.push({
-                // "name":"pass",
-                // "value": $("#password").val()
-            // });
-        // }
-// 
-        // var email = $("#username").val();
-        // var pass = $("#password").val();
-// 
-        // console.log($("#username").val());
-        // console.log($("#password").val());
-        // $.ajax({
-            // type:"POST",
-            // url:"validate_user.php",
-            // data:{email:email, pass:pass},
-            // cache:false,
-            // beforeSend:function(){
-// 
-            // },
-            // success:function(){
-                // location.href = "../admin/validate_user.php";
-            // }
-        // });
+    $("#clear").click(function(){
         $("#login_form")[0].reset();
+    });
+
+    $("#ingresar").on('click',function(){
+        location.href = "../admin/validate_user.php";
     });
 
 });

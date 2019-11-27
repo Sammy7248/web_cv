@@ -25,6 +25,7 @@ $(document).ready(function(){
     $('#select-vacantes').load("../php/select.php");
 
     $("#estados").load("../php/estados.php");
+    
     var cont = 1;
     $("#togg").click(function(event) {
         event.preventDefault();

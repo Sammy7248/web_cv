@@ -11,7 +11,8 @@
     for($i=0;$i<count($estados);++$i){
 
 ?>
-<option value="<?php echo $estados[$i] ?>"><?php echo $estados[$i] ?></option>
+<!-- require data-subtext="" -->
+<option require data-subtext="" value="<?php echo $estados[$i]?>"><?php echo $estados[$i] ?></option>
 <?php
     }
 ?>

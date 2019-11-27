@@ -7,12 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 
-    <link rel="stylesheet" href="../../bootstrap-3/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../../fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../datatables/datatables.min.css" type="text/css">
-    <link rel="stylesheet" href="../../datatables/DataTables-1.10.18/css/dataTables.bootstrap.min.css" type="text/css">
-    <link type="text/css" rel="stylesheet" href="../../toast_/jquery.toast.css">
-    <link type="text/css" rel="stylesheet" href="../../select-input/select-input-css/bootstrap-select.css">
+    <?php
+        require "css.php";
+    ?>
     <link rel="stylesheet" type="text/css" href="../../css/admin.css">
 
 </head>
@@ -21,28 +18,28 @@
     <div id="login">
         <form action="validate_user.php" id="login_form" class="form" method="post">
             <img id="log_img" src="../../image/log.png">
+            <h2>Iniciar Sesi&oacute;n</h2>
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="E-mail" name="username">
+                <input class="form-control" type="email" placeholder="E-mail" name="username">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
             </div>
             <div class="input-group">
-                <input class="form-control" type="password" placeholder="Password" name="password">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>
+                <input class="form-control" type="password" placeholder="Password" id="password" name="password">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open" id="show"></i></span>
             </div>
+            <label id="recordarme">Recordarme <input type="checkbox"></label>
             <input class="btn btn-success" type="submit" value="Ingresar" id="ingresar">
+            <label id="clear">Limpiar</label>
         </form>
     </div>
 
-    <div id="datatable_">
+    <div id="datatable">
 
     </div>
 
-
-    <script src="../../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../../bootstrap-3/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../../datatables/datatables.min.js" type="text/javascript"></script>
-    <script src="../../toast_/jquery.toast.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../../select-input/select-input-js/bootstrap-select.js"></script>
+    <?php
+        require "js.php";
+    ?>
     <script type="text/javascript" src="../../js/login.js"></script>
 </body>
 
