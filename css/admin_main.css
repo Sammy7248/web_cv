@@ -10,7 +10,7 @@ body{
 }
 
 #menu{
-    background: #11406D;
+    background: #428bca;
     padding:5px;
 }
 
@@ -32,7 +32,6 @@ body{
 }
 /* style="background: #11406D; color: white;font-weight: 800;font-size: 20px;" */
 .container-fluid .panel .panel-heading{
-    background: #11406D;
     color: white;
     font-weight: 800;
     font-size: 20px;

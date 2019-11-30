@@ -33,10 +33,6 @@
         </form>
     </div>
 
-    <div id="datatable">
-
-    </div>
-
     <?php
         require "js.php";
     ?>

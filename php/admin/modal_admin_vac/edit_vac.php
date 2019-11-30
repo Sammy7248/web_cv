@@ -3,13 +3,13 @@
         <div class="modal-content">
             <div class="modal-header bg bg-primary">
                 <button type="button" class="close" data-dismiss="true">&times;</button>
-                <h4 class="modal-tittle header-modal">Editar Usuario</h4>
+                <h4 class="modal-tittle header-modal">Editar Vacante</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col col-md-12">
                         <div class="col col-md-12">
-                            Informaci&oacute;n Del Puesto
+                            <h5>Informaci&oacute;n Del Puesto</h5>
                         </div>
                     </div>
                     <div class="col col-md-12">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="col col-md-12">
                         <div class="col col-md-12">
-                            Edad
+                        <h5>Edad</h5>    
                         </div>
                     </div>
                     <div class="col col-md-12">
