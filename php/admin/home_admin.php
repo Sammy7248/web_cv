@@ -31,7 +31,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand">Grupo
+                                <a class="navbar-brand" href="#inicio">Grupo
                                     Antolin Silao</a>
                             </div>
                             <div class="collapse navbar-collapse" id="myNavbar">
@@ -77,6 +77,7 @@
     <script>
         $(document).ready(function() {
             // $("#datatable_vacantes").load("../datatable/tab_vac.php");
+            $("#cont_tables").load("inicio.php");
 
             $("#salir").click(function() {
                 $("#log_out").modal("show");
@@ -84,6 +85,10 @@
 
             $("#vacantes").click(function() {
                 $("#cont_tables").load("tabla_vac.php");
+            });
+
+            $("a[href='#inicio']").click(function(){
+                $("#cont_tables").load("inicio.php");
             });
 
             $("#postulados").click(function() {

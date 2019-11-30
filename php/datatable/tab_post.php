@@ -16,6 +16,7 @@ $res_postul = mysqli_query($conexion, $query);
             <td>Telefono</td>
             <td>E-Mail</td>
             <td>Capacidades</td>
+            <td>Opciones</td>
         </tr>
     </thead>
     <tbody>
@@ -30,6 +31,9 @@ $res_postul = mysqli_query($conexion, $query);
                 <td><?php echo $row[6] ?></td>
                 <td><?php echo $row[7] ?></td>
                 <td><?php echo $row[8] ?></td>
+                <td>
+                    <button title="Descargar CV" class="btn btn-success btn-sm" id="download_cv" name="download_cv"><i class="glyphicon glyphicon-download"></i></button>
+                </td>
             </tr>
         <?php
         }

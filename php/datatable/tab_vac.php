@@ -37,7 +37,7 @@ $estatus = ["D"=>"Disponible","O"=>"Ocupado"];
                 <td><?php echo $row[12] ?></td>
                 <td><?php echo $estatus[$row[13]] ?></td>
                 <td>
-                    <button value="<?php echo $row[0]?>" class="btn btn-success btn-sm" title="Editar" data-target="#edit_vac" data-toggle="modal"><i class="glyphicon glyphicon-pencil"></i></button>
+                    <button value="<?php echo $row[0]?>" class="btn btn-info btn-sm" title="Editar" data-target="#edit_vac" data-toggle="modal"><i class="glyphicon glyphicon-pencil"></i></button>
                     <button value="<?php echo $row[0]?>" class="btn btn-danger btn-sm" title="Eliminar" data-target="#del_vac" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i></button>
                 </td>
             </tr>
@@ -84,7 +84,7 @@ $estatus = ["D"=>"Disponible","O"=>"Ocupado"];
                 },
                 "sProcessing": "Procesando...",
             },
-            // columns=
+            // columns:aoColumns
             "processing": true,
             "columnDefs": [
             {

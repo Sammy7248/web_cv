@@ -40,23 +40,22 @@ $(document).ready(function(){
         cont = cont + 1;
     });
 
-    var values = [];
     var id_vac = 0;
     var estado = "";
 
     $('#select-vacantes').change(function(){
-        console.log($(this).val());
         id_vac = $(this).val();
     });
 
     $('#estados').change(function(){
-        console.log($(this).val());
         estado = $(this).val();
     });
 
     $('#enviar').on('click', function(){
-        console.log(values);
+        console.log(id_vac);
+
         var data = new FormData();
+
         data.append("vacante_id",id_vac);
         data.append("estado",estado);
         
@@ -71,6 +70,7 @@ $(document).ready(function(){
     
         if($("#ciudad").val().length > 0){
             data.append("ciudad",$("#ciudad").val());
+            console.log($("#ciudad").val())
         }
         
 
@@ -90,11 +90,12 @@ $(document).ready(function(){
 
         data.append("cv",$('#cv')[0].files[0]);
 
+        
         $.ajax({
             type:"POST",
             url:"../php/registrarpost.php",
             data:data,
-            contentType:false,
+            // contentType:false,
             processData:false,
             success:function(){
                 $.toast({
@@ -105,6 +106,7 @@ $(document).ready(function(){
                     position: 'top-right',
                     hideAfter:7000
                 }); 
+                // location.href = "../php/registrarpost.php";
             }
         }).fail(function(x, error){
             $.toast({
